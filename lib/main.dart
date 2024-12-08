@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart'; // Import url_launcher
+import 'package:project/kalkulator.dart'; // Import url_launcher
 
 void main() {
   runApp(const MyApp());
@@ -72,6 +73,20 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.pop(context);
               },
             ),
+                            ListTile(
+                  leading: const Icon(
+                    Icons.calculate,
+                    color: Colors.grey,
+                  ),
+                  title: const Text('Kalkulator'),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const KalkulatorStandarPage()),
+                    );
+                  },
+                ),
             ListTile(
               leading: const Icon(Icons.facebook),
               title: const Text('Facebook'),
